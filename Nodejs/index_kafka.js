@@ -1,10 +1,3 @@
-/**
-* @Author: Hang Wu <Dukecat>
-* @Date:   2017-02-11T22:33:57-05:00
-* @Email:  wuhang0613@gmail.com
-* @Last modified by:   Dukecat
-* @Last modified time: 2017-02-15T14:48:32-05:00
-*/
 
 
 // - get command line arguments
