@@ -1,10 +1,3 @@
-/**
-* @Author: Hang Wu <Dukecat>
-* @Date:   2017-02-11T23:01:55-05:00
-* @Email:  wuhang0613@gmail.com
-* @Last modified by:   Dukecat
-* @Last modified time: 2017-02-15T23:18:59-05:00
-*/
 
 $(function () {
 
