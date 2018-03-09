@@ -25,7 +25,7 @@ Run the following command to grant `ec2.py` script permission to run:
 chmod +x /etc/ansible/ec2.py
 ```
 
-更改ansible的默认配置, 将以下文本放置在`/etc/ansible/ansible.cfg`文件中
+To modify the default configuration of Ansible, please put the text below into `/etc/ansible/ansible.cfg`
 ```ini
 inventory = /etc/ansible/ec2.py
 host_key_checking = False

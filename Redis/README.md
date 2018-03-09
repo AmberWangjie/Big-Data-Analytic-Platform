@@ -1,0 +1,19 @@
+# Redis
+
+## redis-producer.py
+Redis producer, receiving msg from a Kafka topic, publishing to redis PUB
+
+### Dependency
+kafka-python    https://github.com/dpkp/kafka-python
+
+redis           https://pypi.python.org/pypi/redis
+
+```sh
+pip install -r requirements.txt
+```
+
+### Usage
+Assuming your Kafka and Redis running in a docker-machine called bigdata, whose ip is 192.168.99.100
+```sh
+python redis-publisher.py average-stock-price 192.168.99.100:9092 average-stock-price 192.168.99.100 6379
+```
