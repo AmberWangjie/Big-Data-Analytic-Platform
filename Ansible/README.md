@@ -1,26 +1,26 @@
-# Ansible相关代码
+# Ansible
 
-## 安装依赖
+## Dependency
 ```sh
 ansible-galaxy install AnsibleShipyard.ansible-zookeeper
 ```
 
-## Ansible环境设置
-首先参照`http://docs.ansible.com/ansible/intro_installation.html`来安装Ansible。 安装完成后, 运行下面的命令来确认安装成功:
+## Ansible Env Config
+See [here](http://docs.ansible.com/ansible/intro_installation.html) to install Ansible. After this, run the following command to confirm install successfully:
 ```sh
 ansible --version
 ```
 
-Ansible的好多配置文件都位于`/etc/ansible`文件夹下, 一般是禁止改动的, 所以为了后面操作的方便, 运行以下命令来更改`/etc/ansible`文件夹的权限:
+Lots of Ansible's config files are under `/etc/ansible`, usually non-editable, so for your convenience, run the following command under `/etc/ansible` to change access permission:
 ```sh
 sudo chmod -R 777 /etc/ansible
 ```
 
-为了使用Ansible Dynamic Inventory, 你需要下载一下两个文件, 并把它们放在`/etc/ansible`文件夹下:
+To use Ansible Dynamic Inventory, you need to download the following files and put them under `/etc/ansible`:
 * https://raw.githubusercontent.com/ansible/ansible/devel/contrib/inventory/ec2.ini
 * https://raw.githubusercontent.com/ansible/ansible/devel/contrib/inventory/ec2.py
 
-运行以下命令给`ec2.py`脚本运行的权限:
+Run the following command to grant `ec2.py` script permission to run:
 ```sh
 chmod +x /etc/ansible/ec2.py
 ```
