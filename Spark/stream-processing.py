@@ -41,8 +41,10 @@ def shutdown_hook(producer):
 
 
 def process_stream(stream):
-
+    """ load price, compute average, send back """
+    
     def send_to_kafka(rdd):
+        """ send data with averaging results back to kafka """
         results = rdd.collect()
         for r in results:
             data = json.dumps(
@@ -59,9 +61,11 @@ def process_stream(stream):
                 logger.warn('Failed to send average stock price to kafka, caused by: %s', error.message)
 
     def pair(data):
+        """ get the last trade price of a certain stock """
         record = json.loads(data[1].decode('utf-8'))[0]
         return record.get('Symbol'), (float(record.get('LastTradePrice')), 1)
-
+    
+    #map -> reduce
     stream.map(pair).reduceByKey(lambda a, b: (a[0] + b[0], a[1] + b[1])).map(lambda (k, v): (k, v[0]/v[1])).foreachRDD(send_to_kafka)
 
 

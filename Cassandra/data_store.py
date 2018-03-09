@@ -1,8 +1,3 @@
-# @Author: Hang Wu <Dukecat>
-# @Date:   2017-01-28T22:29:41-05:00
-# @Email:  wuhang0613@gmail.com
-# @Last modified by:   Dukecat
-# @Last modified time: 2017-01-31T23:51:40-05:00
 
 #-kafka read data
 #- write data to cassandra

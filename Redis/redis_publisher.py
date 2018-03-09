@@ -1,8 +1,3 @@
-# @Author: Hang Wu <Dukecat>
-# @Date:   2017-02-11T22:04:34-05:00
-# @Email:  wuhang0613@gmail.com
-# @Last modified by:   Dukecat
-# @Last modified time: 2017-02-11T22:12:41-05:00
 
 # -read from kafka topic
 # - publish to redis pub
@@ -44,7 +39,7 @@ if __name__ == '__main__':
     # - redis client
 
     redis_client=redis.StrictRedis(host=redis_host,port=redis_port)
-     # - publish message to redis hub
+     # - publish message to redis pub channel, whose sub channel will connect with Node server later
     for msg in kafka_consumer:
         logger.info("receive new data from kafka %s" %msg.value)
         redis_client.publish(redis_channel,msg.value)

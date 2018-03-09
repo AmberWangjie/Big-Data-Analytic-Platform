@@ -1,8 +1,3 @@
-# @Author: Hang Wu <Dukecat>
-# @Date:   2017-02-05T22:33:52-05:00
-# @Email:  wuhang0613@gmail.com
-# @Last modified by:   Dukecat
-# @Last modified time: 2017-02-08T18:47:08-05:00
 
 # - read data from kafka
 # - do computation

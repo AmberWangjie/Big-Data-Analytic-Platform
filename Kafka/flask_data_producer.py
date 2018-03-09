@@ -1,8 +1,3 @@
-# @Author: Hang Wu <Dukecat>
-# @Date:   2017-02-13T21:20:41-05:00
-# @Email:  wuhang0613@gmail.com
-# @Last modified by:   Dukecat
-# @Last modified time: 2017-02-18T14:52:33-05:00
 
 import atexit
 import logging
