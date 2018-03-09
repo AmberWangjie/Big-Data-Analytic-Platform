@@ -1,11 +1,11 @@
-# Big-Data Analytic Platform
-This repo is the implementation of a stock data analytic infrastructure built with Apache big data technologies, including Kafka, Cassandra, Spark, Redis. Kafka as the high volume data transmitter, Cassandra as the NoSQL database, Spark can do streaming process, ElasticSearch as the fast search engine, node.js as the server.
+# Big Data Analytic Platform
+This repo is the implementation of a data pipeline infrastructure built with Apache big data technologies, including Kafka, Cassandra, Spark, Redis. Kafka as the high volume data transmitter, Cassandra as the NoSQL database, Spark can do streaming process, ElasticSearch as the fast search engine, node.js as the server. The platform was designed to have high performance and ability to scale easily. If you are interested in learning more, start playing with each component by following the guide from READMEs under their folders!
 
 # Overview 
 Firstly, the stock data was retrieved from real-time stock dataset and ingested by Kafka cluster; then spark streaming was utilized to processe the raw data from Kafka brokers and compute the average value of the stock prices within a time period; the processed data then be pushed to redis hub for server to fetch; finally, there will be a simple dashboard UI developed using Bootstrap, D3.js, etc. to display the real-time price trends. 
 <br><img src="https://github.com/Dukecat0613/Big-Data/blob/master/ImagesSet/Screen%20Shot%202017-02-16%20at%2011.21.24%20AM.png"></br>
 
-# Dependency Pre-requsites
+# Dependency 
 Please follow [this](https://docs.google.com/document/d/1d-ggqJGTdizkEO9sPjitKJksexe0vWE_9_O_zy8JH-s/edit?usp=sharing) guide to check and install software components required to run this program in your dev environment.
 
 # Usage
